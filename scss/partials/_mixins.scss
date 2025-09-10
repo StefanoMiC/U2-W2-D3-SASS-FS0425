@@ -1,0 +1,31 @@
+@mixin box-shadow($x: 0, $y: 0, $blur: 0, $color: rgb(110, 110, 110), $spread: 0) {
+  box-shadow: $x $y $blur $spread $color;
+  padding-block: 1rem;
+}
+@mixin box($border-size, $box-color, $radius: 20px) {
+  width: 200px;
+  height: 200px;
+  margin-block: 2rem;
+  display: inline-block;
+  border-radius: $radius;
+  border: $border-size solid adjust-color($box-color, $lightness: -20%);
+  color: white;
+  background-color: $box-color;
+  box-shadow: 0 3px 20px adjust-color($box-color, $lightness: -50%);
+}
+@mixin dynamicBox($size, $property-type, $property-value) {
+  width: $size;
+  height: $size;
+  margin-block: 2rem;
+  display: inline-block;
+  border: 2px solid black;
+  color: white;
+  // interpolare valori dinamici #{}
+  background-#{$property-type}: $property-value;
+
+  @if ($property-type == "image") {
+    background-size: cover;
+  } @else {
+    border-radius: 10px;
+  }
+}

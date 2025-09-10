@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  margin-inline: auto;
+
+  // le media queries possono essere inserite direttamente nel selettore,
+  // così da applicare dentro di lui le proprietà derivanti dall'applicazione della media query
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 740px;
+  }
+  @media screen and (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1160px;
+  }
+}

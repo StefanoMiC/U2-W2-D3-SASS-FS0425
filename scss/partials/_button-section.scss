@@ -1,0 +1,33 @@
+.button-section {
+  margin-block: $size-md;
+  padding: $size;
+}
+
+// 4) EXTEND (@extend)
+.button-section-alt {
+  @extend .button-section;
+  border: 2px solid $main-color;
+}
+
+// 5) PLACEHOLDER (%)
+// vedi partial _placeholders.scss
+
+.button-section-alt {
+  button {
+    @extend %reset-btn, %reset-font;
+  }
+}
+
+input,
+textarea,
+select {
+  @extend %reset-font;
+}
+
+// 6) MIXINS (@mixin) - un blocco di regole CSS -DINAMICHE-, può utilizzare dei parametri per i propri valori interni
+.button-section-alt {
+  button {
+    // @include box-shadow(0, 6px, 10px, rgba(220, 20, 60, 0.455));
+    @include box-shadow($blur: 10px);
+  }
+}

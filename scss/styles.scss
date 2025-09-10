@@ -1,0 +1,13 @@
+// 1) VARIABILI SASS
+
+@import "./partials/variables";
+@import "./partials/placeholders";
+@import "./partials/mixins";
+@import "./partials/resets";
+@import "./partials/main";
+@import "./partials/container";
+@import "./partials/button-section";
+@import "./partials/boxes";
+@import "./partials/loops";
+
+// ognuno di questi parziali comporrà parte del css finale nell'ordine corrispondente all'ordine di import (attenzione a importare prima le parti da cui gli altri dipendono: es. variabili, placeholders, mixin)

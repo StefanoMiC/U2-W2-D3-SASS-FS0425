@@ -1,0 +1,17 @@
+.box-1 {
+  @include box(2px, palevioletred);
+}
+.box-2 {
+  @include box(1px, palegreen);
+}
+.box-3 {
+  @include box(5px, paleturquoise);
+}
+
+.box-4 {
+  @include dynamicBox(300px, "color", darkblue);
+}
+
+.box-5 {
+  @include dynamicBox(300px, "image", url(https://images.unsplash.com/photo-1757269267541-b68db349bf1e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D));
+}

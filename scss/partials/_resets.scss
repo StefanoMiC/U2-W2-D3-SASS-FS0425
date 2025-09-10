@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+
+  // tutte le proprietà composte da proprietà-*
+  // possono essere ottimizzate definendole singolarmente per categoria
+  padding: {
+    top: $size-md;
+    bottom: $size-md;
+  }
+}

@@ -1,0 +1,95 @@
+// main section {
+//   background-color: $main-color;
+// }
+
+// main section .container h1 {
+//   font-size: $size-xxl;
+//   padding: $size;
+//   margin-top: 0;
+// }
+
+// main section .container ul {
+//   color: $body-color-inverted;
+// }
+
+// main section .container button {
+//   background-color: $body-color-inverted;
+//   color: $main-color;
+//   margin-inline-start: $size;
+//   margin-block-end: $size;
+// }
+
+// 2) NESTING CSS SELECTORS
+main {
+  section {
+    background-color: $main-color;
+    .container {
+      h1 {
+        font-size: $size-xxl;
+        padding: $size;
+        margin-top: 0;
+      }
+      ul {
+        color: $body-color-inverted;
+
+        li {
+          &::marker {
+            content: "🚀";
+          }
+
+          &:nth-child(3) {
+            border: 2px solid black;
+          }
+        }
+      }
+      button {
+        background-color: $body-color-inverted;
+        color: $main-color;
+        margin-inline-start: $size;
+        margin-block-end: $size;
+
+        // 3) PARENT SELECTOR
+        &:hover {
+          background-color: $main-color;
+          color: $body-color-inverted;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  &__button {
+    // partendo da un colore principale troviamo le altre due varianti
+    $button-color: paleturquoise;
+    $success-btn-color: adjust-hue(paleturquoise, 90deg);
+    $danger-btn-color: adjust-hue(paleturquoise, 180deg);
+
+    padding: $size-xs $size;
+    border: 1px solid transparent;
+    font: {
+      weight: 500;
+      size: $size;
+    }
+    border-radius: 3px;
+
+    &--primary {
+      background-color: $button-color;
+      border-color: adjust-color($color: $button-color, $lightness: -20%);
+      box-shadow: 0 5px 10px adjust-color($color: $button-color, $lightness: -50%);
+      color: adjust-color($color: $button-color, $lightness: -65%);
+    }
+    &--success {
+      background-color: $success-btn-color;
+      border-color: adjust-color($color: $success-btn-color, $lightness: -20%);
+      box-shadow: 0 5px 10px adjust-color($color: $success-btn-color, $lightness: -50%);
+      color: adjust-color($color: $success-btn-color, $lightness: -60%);
+    }
+    &--danger {
+      background-color: $danger-btn-color;
+      border-color: adjust-color($color: $danger-btn-color, $lightness: -20%);
+      box-shadow: 0 5px 10px adjust-color($color: $danger-btn-color, $lightness: -50%);
+      color: adjust-color($color: $danger-btn-color, $lightness: -60%);
+    }
+  }
+}
