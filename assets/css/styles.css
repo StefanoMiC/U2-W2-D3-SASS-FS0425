@@ -58,19 +58,19 @@ main section .container button:hover {
 .main__button--primary {
   background-color: paleturquoise;
   border-color: rgb(90.8762886598, 220.1237113402, 220.1237113402);
-  box-shadow: 0 5px 10px rgb(27.6907216495, 130.3092783505, 130.3092783505);
+  box-shadow: 0 5px 10px rgba(27.6907216495, 130.3092783505, 130.3092783505, 0.3);
   color: rgb(14.2835051546, 67.2164948454, 67.2164948454);
 }
 .main__button--success {
   background-color: rgb(206.5, 175, 238);
   border-color: rgb(155.5, 90.8762886598, 220.1237113402);
-  box-shadow: 0 5px 10px rgb(79, 27.6907216495, 130.3092783505);
+  box-shadow: 0 5px 10px rgba(79, 27.6907216495, 130.3092783505, 0.3);
   color: rgb(53.5, 18.7525773196, 88.2474226804);
 }
 .main__button--danger {
   background-color: #eeafaf;
   border-color: rgb(220.1237113402, 90.8762886598, 90.8762886598);
-  box-shadow: 0 5px 10px rgb(130.3092783505, 27.6907216495, 27.6907216495);
+  box-shadow: 0 5px 10px rgba(130.3092783505, 27.6907216495, 27.6907216495, 0.3);
   color: rgb(88.2474226804, 18.7525773196, 18.7525773196);
 }
 

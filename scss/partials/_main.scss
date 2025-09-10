@@ -1,3 +1,4 @@
+@use "sass:color";
 // main section {
 //   background-color: $main-color;
 // }
@@ -76,19 +77,19 @@ main {
     &--primary {
       background-color: $button-color;
       border-color: adjust-color($color: $button-color, $lightness: -20%);
-      box-shadow: 0 5px 10px adjust-color($color: $button-color, $lightness: -50%);
+      box-shadow: 0 5px 10px adjust-color($button-color, $lightness: -50%, $alpha: -0.7);
       color: adjust-color($color: $button-color, $lightness: -65%);
     }
     &--success {
       background-color: $success-btn-color;
       border-color: adjust-color($color: $success-btn-color, $lightness: -20%);
-      box-shadow: 0 5px 10px adjust-color($color: $success-btn-color, $lightness: -50%);
+      box-shadow: 0 5px 10px adjust-color($color: $success-btn-color, $lightness: -50%, $alpha: -0.7);
       color: adjust-color($color: $success-btn-color, $lightness: -60%);
     }
     &--danger {
       background-color: $danger-btn-color;
       border-color: adjust-color($color: $danger-btn-color, $lightness: -20%);
-      box-shadow: 0 5px 10px adjust-color($color: $danger-btn-color, $lightness: -50%);
+      box-shadow: 0 5px 10px adjust-color($color: $danger-btn-color, $lightness: -50%, $alpha: -0.7);
       color: adjust-color($color: $danger-btn-color, $lightness: -60%);
     }
   }
